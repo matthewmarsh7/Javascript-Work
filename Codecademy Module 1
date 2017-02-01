@@ -1,0 +1,7 @@
+var playGames = 'yes'
+var hadDinner = true
+if (playGames === 'yes' || hadDinner === true) {console.log('lets play\!');}
+else if (playGames === 'later') {console.log('in a few hours');}
+else if (playGames === 'tomorrow')
+  {console.log('lets try tomorrow');}
+else {console.log('Ive been playing for hours\!');}
