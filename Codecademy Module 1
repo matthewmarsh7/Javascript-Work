@@ -1,3 +1,5 @@
+//Basic game of seeing who is hungry
+
 var playGames = 'yes'
 var hadDinner = true
 if (playGames === 'yes' || hadDinner === true) {console.log('lets play\!');}
