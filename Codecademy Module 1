@@ -57,4 +57,22 @@ console.log('You threw: ' + userChoice);
 console.log('PC threw: ' + computerChoice);
 console.log(determineWinner(userChoice, computerChoice)); 
 }
-playGame();           
+playGame();          
+
+// How to program arrays into whale talk!
+
+var input = prompt('please enter a phrase');
+var vowels = ['a' ,'e' ,'i' ,'o' ,'u'];
+var resultArray = [];
+for (var i = 0; i < input.length; i++)
+
+{
+  for (var j = 0; j < vowels.length; j++){
+  if (input[i] === vowels[j]){resultArray.push(input[i]);
+} }
+  if (input[i] === 'e' || input[i] === 'u') {resultArray.push(input[i]);
+                        }
+}
+ console.log(resultArray.join('').toUpperCase());
+ 
+ 
