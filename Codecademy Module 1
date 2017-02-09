@@ -1,4 +1,5 @@
 //Basic game of seeing who is hungry
+//
 
 var playGames = 'yes'
 var hadDinner = true
@@ -8,7 +9,29 @@ else if (playGames === 'tomorrow')
   {console.log('lets try tomorrow');}
 else {console.log('Ive been playing for hours\!');}
 
+//behold the magic 8 ball!!!
+//
+
+var userQuestion = 'Is that Aaron/?';
+var randomNumber = Math.floor(Math.random() * 7);
+var eightBall = '';
+
+if (randomNumber === 1){console.log('It is certain');}
+else if (randomNumber === 2){console.log('It is decidedly so');}
+else if (randomNumber === 3){console.log('Reply hazy try again');}
+else if (randomNumber === 4){console.log('Cannot predict now');}
+else if (randomNumber === 5){console.log('Don\'t count on it');}
+else if (randomNumber === 6){console.log('My sources say no');}
+else if (randomNumber === 7){console.log('Outlook not so good');}
+else if (randomNumber === 8){console.log('Signs point to yes');}
+
+
+console.log('The user asked: ' + userQuestion);
+
+console.log('The eight ball answered: ' + eightBall);
+
 //basic game of rock paper scissors, without the bomb hack that the lesson ends with. 
+//
 
 function getUserChoice(){
 var userInput = prompt('Rock, Paper, or Scissors?');
@@ -60,6 +83,7 @@ console.log(determineWinner(userChoice, computerChoice));
 playGame();          
 
 // How to program arrays into whale talk!
+//
 
 var input = prompt('please enter a phrase');
 var vowels = ['a' ,'e' ,'i' ,'o' ,'u'];
