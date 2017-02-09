@@ -5,3 +5,54 @@ else if (playGames === 'later') {console.log('in a few hours');}
 else if (playGames === 'tomorrow')
   {console.log('lets try tomorrow');}
 else {console.log('Ive been playing for hours\!');}
+
+//basic game of rock paper scissors
+
+function getUserChoice(){
+var userInput = prompt('Rock, Paper, or Scissors?');
+userInput = userInput.toLowerCase(); 
+if(userInput === 'rock'|| userInput === 'paper' || userInput === 'scissors'){
+return userInput; 
+}else{
+console.log('Error');
+}
+}
+function getComputerChoice(){
+Math.floor(Math.random()*3);
+var randomMath = Math.floor(Math.random()*3);
+switch (randomMath){
+case 0: 
+return 'rock';
+break;
+case 1: 
+return 'paper'; 
+break;
+case 2: 
+return 'scissors';
+break;
+} 
+}
+function determineWinner(userChoice, computerChoice){
+if (userChoice === 'rock' && computerChoice=== 'scissors'){
+return 'You win';
+} else if (userChoice === 'paper' && computerChoice=== 'rock'){
+return 'You win';
+} else if(userChoice === 'scissors' && computerChoice=== 'paper'){
+return 'You win';
+} 
+else{
+return 'You lose'; 
+} 
+  if(userChoice === computerChoice){
+return 'The game is a tie!';
+}
+
+}
+function playGame(){
+var userChoice = getUserChoice();
+var computerChoice = getComputerChoice(); 
+console.log('You threw: ' + userChoice); 
+console.log('PC threw: ' + computerChoice);
+console.log(determineWinner(userChoice, computerChoice)); 
+}
+playGame();           
