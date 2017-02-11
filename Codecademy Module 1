@@ -99,4 +99,35 @@ for (var i = 0; i < input.length; i++)
 }
  console.log(resultArray.join('').toUpperCase());
  
+ //A program that programs if youare getting enough sleep hours per week. 
+ 
+ function getSleepHours(day){ 
+  var hours = prompt('how many hours of sleep did you get on ' + day + '?');
+return Number(hours);}
+
+
+function getActualSleepHours() {
+	return getSleepHours('Sunday') + getSleepHours('Monday') + getSleepHours('Tuesday') + getSleepHours('Wednesday') + getSleepHours('Thursday') + getSleepHours('Friday') + getSleepHours('Saturday');
+}
+
+function getIdealSleepHours (){var idealHoursPerNight = prompt('how much sleep is ideal per night?'); return Number(idealHoursPerNight) * 7;}
+
+function calculateSleepDebt(){
+  
+  var actualSleepHours = getActualSleepHours();
+  var idealSleepHours = getIdealSleepHours();
+
+  if (actualSleepHours === idealSleepHours){
+     console.log('You are getting enough sleep');}
+
+else if (actualSleepHours > idealSleepHours){
+  console.log('you got ' + (actualSleepHours - idealSleepHours) + ' hours more sleep than you needed this week');}
+
+  else {console.log('you got ' + (idealSleepHours - actualSleepHours) + ' hours less sleep than is ideal for the week.');}
+               }
+
+getIdealSleepHours();
+calculateSleepDebt();
+  
+ 
  
